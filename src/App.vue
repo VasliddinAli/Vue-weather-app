@@ -70,6 +70,8 @@ export default {
             return res.json();
           })
           .then(this.setResults);
+          this.query = ''
+          e.target.blur();
       }
     },
     setResults(results) {
