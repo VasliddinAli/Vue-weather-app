@@ -9,7 +9,7 @@
         <input
           type="text"
           class="search-bar"
-          placeholder="Search..."
+          placeholder="Search loacate..."
           v-model="query"
           @keypress="showWeather"
         />
@@ -32,6 +32,7 @@
         </div>
       </div>
     </main>
+    <p class="creator">Create by Vasliddin Alijonov<br>+998 94 444 60 50</p>
   </div>
 </template>
 
@@ -229,6 +230,23 @@ body {
   }
   100% {
     transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+  }
+}
+
+
+
+.creator{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #ccc;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: right;
+}
+@media(max-width:600px){
+  .creator{
+    font-size: 12px;
   }
 }
 
