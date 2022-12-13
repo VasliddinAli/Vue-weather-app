@@ -24,11 +24,11 @@
         <div class="weather-box">
           <div class="temp">{{ Math.round(weather.main.temp) }}°C</div>
           <div class="weather">{{ weather.weather[0].main }}</div>
-          <div class="qoshimcha">His qilinishi: <span>{{ weather.main.temp_min }}°C</span></div>
-          <div class="qoshimcha">Namlik: <span>{{ weather.main.humidity }}%</span></div>
-          <div class="qoshimcha">Bulutlik: <span>{{ weather.clouds.all }}%</span></div>
-          <div class="qoshimcha">Shamol: <span>{{ weather.wind.speed }}m/s</span></div>
-          <div class="qoshimcha">Ko'rish: <span>{{ weather.visibility }}m</span></div>
+          <div class="qoshimcha">Feels: <span>{{ weather.main.temp_min }}°C</span></div>
+          <div class="qoshimcha">Humidity: <span>{{ weather.main.humidity }}%</span></div>
+          <div class="qoshimcha">Cloudiness: <span>{{ weather.clouds.all }}%</span></div>
+          <div class="qoshimcha">Wind: <span>{{ weather.wind.speed }}m/s</span></div>
+          <div class="qoshimcha">Visibility: <span>{{ weather.visibility }}m</span></div>
         </div>
       </div>
     </main>
@@ -114,6 +114,17 @@ export default {
 
 
 <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+
+
+
 .loader {
   width: 100%;
   height: 100vh;
@@ -220,15 +231,6 @@ export default {
 }
 
 
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-    font-family: cursive;
-}
 #app {
   background-image: url(./assets/cold.jpg);
   background-size: cover;
@@ -254,7 +256,6 @@ main {
   width: 90%;
 }
 .search-box .search-bar {
-  font-family: cursive;
   margin-top: 30vh;
   display: block;
   width: 100%;
